@@ -1,0 +1,12 @@
+Placa Arduino Uno V3 -------------- 105.00 lei		- RoboFun
+Senzor Temperatura Brick ---------- 7.00 lei		- RoboFun
+Rezistor 1k/0.25W (10buc) --------- 1.00 lei		- RoboFun
+Cablu USB 1m Male A - Male B ------ 10.00 lei		- RoboFun
+
+10 x LED 5mm - Culoare Rosu ------- 3.00 lei		- ArduShop
+10 x LED 5mm - Culoare Albastru --- 3.00 lei		- ArduShop
+10 x LED 5mm - Culoare Verde ------ 3.00 lei		- ArduShop
+Display LED 7 segmente ------------ 2.00 lei		- ArduShop
+Buton MIC - PushButton ------------ 0.30 lei		- ArduShop
+
+
