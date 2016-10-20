@@ -1,0 +1,165 @@
+PWM.h
+TIMER.h
+LED.h
+TEMP.h
+UART.h
+BUTTON.h
+
+
+
+
+PVM.c
+{
+	init_pwm()
+	{
+		// initializare;
+	}
+	set_pwm_val( _uint valoare )
+	{
+		// setare valoare pwm;
+	}
+
+}
+
+TIMER.c
+{
+	init_timer0()
+	{
+		// initialisation
+	}
+	init_timer1()
+	{
+		// initialisation
+	}
+	init_timer2()
+	{
+	
+	}
+
+}
+
+LED.c
+{
+	set_Led1_ON()
+	{
+		// one second led ON
+	}
+	set_Led1_OFF()
+	{
+		// one second led OFF
+	}
+	set_Led2_ON()
+	{
+	}                          // temp > 35C
+	set_Led2_OFF()
+	{
+	}
+
+	set_Led3_ON()
+	{
+	}
+	set_Led3_OFF()     	// UART
+	{
+	}
+
+	set_Led4()
+	{
+		set_pwm_val()  // dimming effect
+	}
+}
+
+
+TEMP.c
+{
+	analog_Read( _uint Pin_nr ) // get voltage from pin
+	{
+	}
+	convert_to_C ( double tens ) // convert voltage to Celsius
+	{
+	}
+}
+
+BUTTON.c
+{
+	get_nr_of_Push ( _uint Pin_Nr ) // get press number
+	{
+		_Save_EEPROM( _uint Push_Nr)
+	}
+
+	get_nr_of_seconds ( _uint Pin_Nr) // get push duration
+	{
+		init_timer0(); // timer0 counts how long is the button pressed
+	}
+
+	_Save_EEPROM( _uint Push_Nr )
+	{
+		// save in EEPROM
+	}
+	
+	_get_Data_from_EEPROM()
+	{
+		// get last saved number
+	}
+
+	7_segments_display( _uint number )
+	{
+		// display number
+	}
+}
+
+UART.c
+
+{
+	open_serial_port() // open serial port
+	{
+
+	}
+	// set pin output
+	_get_PC_Data() // get data from PC
+	{
+
+	}
+	_send_PC_Data()	// send data to PC
+	{
+
+	}
+	_Clear_Buffer()	// clear receive buffer function
+	{
+
+	}
+}
+
+
+main()
+{
+	_init_timers();
+	_init_pwm();
+	_open_serial_port();
+	loop()
+	{
+		// call each function in right order
+		set_Led1_ON() 
+		// timer0 number 1 sec...
+		set_Led1_OFF()
+		get_PC_Data()
+
+		if ( data = A)
+			turn on led3
+		else
+			if ( data = S )
+				turn off led3
+		if( convert_to_C > 35 )
+			turn on led2
+		else
+			turn off led2
+		
+		get_data_from_push_button();
+		_save_EEPROM()
+		7_segments_display( _uint number);
+		
+		_set_dimming_effect_LED();
+		
+		
+	}
+}
+
